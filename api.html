@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Testing Tool</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        .container {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .response-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body id="api-menu-body">
+    <div class="container">
+        <h4 class="text-center">API Testing Tool</h4>
+        <form id="apiForm">
+            <div class="form-group">
+                <label for="method">HTTP Method:</label>
+                <div>
+                    <label class="radio-inline"><input type="radio" name="method" value="GET" checked> GET</label>
+                    <label class="radio-inline"><input type="radio" name="method" value="POST"> POST</label>
+                    <label class="radio-inline"><input type="radio" name="method" value="PUT"> PUT</label>
+                    <label class="radio-inline"><input type="radio" name="method" value="DELETE"> DELETE</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="url">Endpoint URL:</label>
+                <input type="url" class="form-control" id="url" placeholder="Enter API URL" required>
+            </div>
+            <div class="form-group">
+                <label for="authType">Authorization:</label>
+                <select class="form-control" id="authType">
+                    <option value="none">None</option>
+                    <option value="Bearer">Bearer Token</option>
+                    <option value="Basic">Basic Auth</option>
+                </select>
+                <input type="text" class="form-control mt-2" id="authToken" placeholder="Enter token or credentials"
+                    disabled>
+            </div>
+            <div class="form-group">
+                <label>Body Type:</label>
+                <div>
+                    <label class="radio-inline"><input type="radio" name="bodyType" value="none" checked> None</label>
+                    <label class="radio-inline"><input type="radio" name="bodyType" value="json"> JSON</label>
+                    <label class="radio-inline"><input type="radio" name="bodyType" value="text"> Text</label>
+                </div>
+                <textarea class="form-control mt-2" id="requestBody" placeholder="Enter request body"
+                    disabled></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Fetch</button>
+        </form>
+
+        <div class="response-section">
+            <h5>Response:</h5>
+            <pre id="responseOutput" class="p-3 border bg-light"></pre>
+            <div id="loadingSpinner" class="spinner-border text-primary" role="status" style="display: none;">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <button id="openResponseTab" class="btn btn-secondary mt-2" style="display: none;">Open in New Tab</button>
+        </div>
+
+    </div>
+
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/popup.js"></script>
+
+</body>
+
+</html>

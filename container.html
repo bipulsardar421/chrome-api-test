@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        /* Centering content inside iframe */
+        body,
+        html {
+            height: 400px;
+            width: 400px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        iframe {
+            border: none;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <iframe id="contentFrame" src="popup.html"></iframe>
+    </div>
+
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script src="scripts/popup.js"></script>
+</body>
+
+</html>
