@@ -123,18 +123,18 @@ We welcome contributions! To contribute:
 
 2. Create a feature branch:
 
-<span style="color: blue;">git</span> <span style="color: green;">checkout</span> <span style="color: orange;">-b</span> <span style="color: red;">feature-name</span>
+* git checkout -b feature-name
 
 
 3. Commit your changes:
 
 
-<span style="color: blue;">git</span> <span style="color: green;">commit</span> <span style="color: orange;">-m</span> <span style="color: red;">"Add feature-name"</span>
+* git commit -m "Add feature-name"
 
 
 4. Push the branch:
 
-<span style="color: blue;">git</span> <span style="color: green;">push</span> <span style="color: orange;">origin</span> <span style="color: red;">feature-name</span>
+* git push origin feature-name
 
 
 5. Open a Pull Request.
